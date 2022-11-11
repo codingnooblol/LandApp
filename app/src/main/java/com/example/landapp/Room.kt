@@ -6,7 +6,7 @@ import java.util.*
 class Room(val price : Int,
            val address : String,
            val floor : Int,
-           val description : String) {
+           val description : String) : java.io.Serializable{
 
     fun getFormattedPrice() : String {
 
