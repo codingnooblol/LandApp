@@ -6,9 +6,9 @@ import java.util.*
 class Room(val price : Int,
            val address : String,
            val floor : Int,
-           val description : String) : java.io.Serializable{
+           val description : String) : java.io.Serializable{ //부동산 앱의 정보들의 형태를 결정
 
-    fun getFormattedPrice() : String {
+    fun getFormattedPrice() : String { //가격 단위를 환산해주는 함수
 
         val hundreadMillion = this.price / 10000
         val tenMillion = this.price % 10000
@@ -27,7 +27,7 @@ class Room(val price : Int,
         }
     }
 
-    fun getFormattedFloor() : String {
+    fun getFormattedFloor() : String { //층을 분류해주는 함수
 
         if(this.floor >= 1) {
             return "${this.floor}층"

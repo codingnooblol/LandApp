@@ -13,7 +13,8 @@ import org.w3c.dom.Text
 class RoomAdapter(
     val mContext :Context,
     val resID : Int,
-    val mList : ArrayList<Room>) : ArrayAdapter<Room>(mContext, resID, mList) {
+    val mList : ArrayList<Room>) : ArrayAdapter<Room>(mContext, resID, mList) { //부모 클래스인 ArrayAdapter의 기능을 가져옴, ArrayAdapter는 혼자서는 기능을 사용할수 없으므로
+                                                                                // 클래스에서 지정해주고 씀
 
         val inflater = LayoutInflater.from(mContext)
 
